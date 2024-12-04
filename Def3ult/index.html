@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع التشفير</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>موقع التشفير</h1>
+    </header>
+    <main>
+        <section id="username">
+            <h2>أدخل اسمك</h2>
+            <input type="text" id="name" required>
+            <button onclick="nextPage()">التالي</button>
+        </section>
+        <section id="options" style="display:none;">
+            <h2>اختر طريقة التشفير</h2>
+            <button onclick="caesarCipher()">تشفير سيزر</button>
+            <button onclick="playfairCipher()">تشفير بلايفير</button>
+            <button onclick="vigenereCipher()">تشفير فيجنير</button>
+            <button onclick="transpositionMatrix()">مصفوفة التبديل</button>
+        </section>
+        <section id="encryption" style="display:none;">
+            <h2>أدخل النص للتشفير</h2>
+            <textarea id="text" required></textarea>
+            <button onclick="encrypt()">تشفير</button>
+            <p id="result"></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
